@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { CalendarEvent } from '@types/calendar';
+import type { CalendarEvent } from '@/types/calendar';
 import { calendarApi } from '@services/calendar';
 
 interface CalendarStore {
@@ -14,7 +14,7 @@ interface CalendarStore {
   setError: (error: string | null) => void;
 }
 
-export const useCalendarStore = create<CalendarStore>((set, get) => ({
+export const useCalendarStore = create<CalendarStore>((set) => ({
   events: [],
   loading: false,
   error: null,

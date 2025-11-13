@@ -10,7 +10,6 @@ import {
   Switch,
   Message,
   Space,
-  Tag,
 } from '@arco-design/web-react';
 import { IconPlus } from '@arco-design/web-react/icon';
 import FullCalendar from '@fullcalendar/react';
@@ -22,12 +21,11 @@ import zhCnLocale from '@fullcalendar/core/locales/zh-cn';
 import dayjs from 'dayjs';
 import { useCalendarStore } from '@store/calendarStore';
 import { calendarApi } from '@services/calendar';
-import type { CalendarEvent, CreateEventDto, EventCategory } from '@types/calendar';
-import { EventCategory as EventCategoryEnum } from '@types/calendar';
+import type { CalendarEvent, CreateEventDto } from '@/types/calendar';
+import { EventCategory as EventCategoryEnum } from '@/types/calendar';
 import './index.css';
 
 const FormItem = Form.Item;
-const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
 function CalendarPage() {

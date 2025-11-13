@@ -4,7 +4,7 @@ import type {
   CreateEventDto,
   UpdateEventDto,
   QueryEventsDto,
-} from '@types/calendar';
+} from '@/types/calendar';
 
 export const calendarApi = {
   // 创建事件
