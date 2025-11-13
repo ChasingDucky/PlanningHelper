@@ -84,8 +84,8 @@ pnpm run dev
 
 6. **访问应用**
 - 前端: http://localhost:5173
-- 后端API: http://localhost:3000
-- API文档: http://localhost:3000/api/docs
+- 后端API: http://localhost:3300
+- API文档: http://localhost:3300/api/docs
 
 ### 使用 Docker Compose 启动（推荐）
 
@@ -123,7 +123,7 @@ PlanningHelper/
 - `bugfix/*`: 修复分支
 
 ### API 文档
-访问 `http://localhost:3000/api/docs` 查看 Swagger API 文档
+访问 `http://localhost:3300/api/docs` 查看 Swagger API 文档
 
 ## 部署
 

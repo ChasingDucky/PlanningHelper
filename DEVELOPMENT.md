@@ -62,7 +62,7 @@ npm install
 #### 4. 启动开发服务器
 
 ```bash
-# 后端（端口 3000）
+# 后端（端口 3300）
 cd backend
 npm run start:dev
 
@@ -74,8 +74,8 @@ npm run dev
 ## 访问应用
 
 - **前端应用**: http://localhost:5173
-- **后端 API**: http://localhost:3000
-- **API 文档**: http://localhost:3000/api/docs
+- **后端 API**: http://localhost:3300
+- **API 文档**: http://localhost:3300/api/docs
 - **PostgreSQL**: localhost:5432
 - **Redis**: localhost:6379
 
@@ -442,7 +442,7 @@ npm run test
 
 ```bash
 # 查找占用端口的进程
-lsof -i :3000
+lsof -i :3300
 lsof -i :5173
 
 # 杀死进程
@@ -543,7 +543,7 @@ npm run build
 如果遇到问题：
 
 1. 查看项目文档
-2. 查看 API 文档 (http://localhost:3000/api/docs)
+2. 查看 API 文档 (http://localhost:3300/api/docs)
 3. 查看日志输出
 4. 搜索相关技术文档
 5. 提交 Issue

@@ -52,8 +52,8 @@ npm run dev
 现在你可以访问应用了：
 
 - 🌐 **前端界面**: http://localhost:5173
-- 🔌 **后端 API**: http://localhost:3000
-- 📚 **API 文档**: http://localhost:3000/api/docs
+- 🔌 **后端 API**: http://localhost:3300
+- 📚 **API 文档**: http://localhost:3300/api/docs
 
 ## 📱 功能演示
 
@@ -108,7 +108,7 @@ docker-compose up -d
 
 - 📘 阅读 [开发指南](DEVELOPMENT.md) 了解如何开发新功能
 - 🏗️ 查看 [架构设计](ARCHITECTURE.md) 了解项目架构
-- 🔍 浏览 [API 文档](http://localhost:3000/api/docs) 了解后端接口
+- 🔍 浏览 [API 文档](http://localhost:3300/api/docs) 了解后端接口
 
 ## ❓ 遇到问题？
 
@@ -125,7 +125,7 @@ docker info
 **问题 2: 端口被占用**
 ```bash
 # 检查端口占用
-lsof -i :3000  # 后端端口
+lsof -i :3300  # 后端端口
 lsof -i :5173  # 前端端口
 lsof -i :5432  # PostgreSQL 端口
 
@@ -168,7 +168,7 @@ docker-compose -f docker-compose.dev.yml down
 ## 💡 小贴士
 
 1. **热重载**: 修改代码后，前端和后端都会自动重启
-2. **API 文档**: 访问 http://localhost:3000/api/docs 可以直接测试 API
+2. **API 文档**: 访问 http://localhost:3300/api/docs 可以直接测试 API
 3. **数据持久化**: 数据会保存在 Docker volume 中，重启不会丢失
 4. **开发工具**: 推荐安装 React DevTools 和 Redux DevTools 浏览器插件
 

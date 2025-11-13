@@ -240,7 +240,7 @@ services:
 
   backend:
     - Node.js Application
-    - Port: 3000 (内部)
+    - Port: 3300 (内部)
 
   postgres:
     - PostgreSQL 16
