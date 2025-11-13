@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database (Development)
+  postgres:
+    image: postgres:16-alpine
+    container_name: planning-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: planning_user
+      POSTGRES_PASSWORD: planning_pass
+      POSTGRES_DB: planning_helper
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  # Redis Cache (Development)
+  redis:
+    image: redis:7-alpine
+    container_name: planning-redis-dev
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_dev_data:/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_dev_data:
+    driver: local
+  redis_dev_data:
+    driver: local

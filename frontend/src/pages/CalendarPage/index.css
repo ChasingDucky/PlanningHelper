@@ -1,0 +1,47 @@
+.calendar-page {
+  height: 100%;
+}
+
+.calendar-page .arco-card {
+  height: 100%;
+}
+
+.calendar-page .arco-card-body {
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+
+/* FullCalendar 自定义样式 */
+.fc {
+  background: white;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.fc-event {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fc-event:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.fc-daygrid-day:hover {
+  background-color: #f7f8fa;
+  cursor: pointer;
+}
+
+.fc-button {
+  background: var(--color-primary-light-1) !important;
+  border-color: var(--color-primary-light-3) !important;
+}
+
+.fc-button:hover {
+  background: var(--color-primary-light-2) !important;
+}
+
+.fc-button-active {
+  background: var(--color-primary) !important;
+}
