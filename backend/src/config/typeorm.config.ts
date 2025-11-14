@@ -14,7 +14,9 @@ export const typeOrmConfig: DataSourceOptions = {
   database: process.env.DB_DATABASE || 'planning_helper',
   entities: [join(__dirname, '../**/*.entity{.ts,.js}')],
   migrations: [join(__dirname, '../migrations/*{.ts,.js}')],
-  synchronize: process.env.NODE_ENV === 'development',
+  // Enable auto-sync for development and Docker demo environments
+  // In true production, use migrations instead
+  synchronize: true,
   logging: process.env.NODE_ENV === 'development',
 };
 
