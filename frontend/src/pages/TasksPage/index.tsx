@@ -293,29 +293,23 @@ function TasksPage() {
           </Col>
           <Col span={6}>
             <Card>
-              <Statistic
-                title="已完成"
-                value={statistics.completed}
-                valueStyle={{ color: '#0fc6c2' }}
-              />
+              <div className="statistic-success">
+                <Statistic title="已完成" value={statistics.completed} />
+              </div>
             </Card>
           </Col>
           <Col span={6}>
             <Card>
-              <Statistic
-                title="进行中"
-                value={statistics.inProgress}
-                valueStyle={{ color: '#165dff' }}
-              />
+              <div className="statistic-primary">
+                <Statistic title="进行中" value={statistics.inProgress} />
+              </div>
             </Card>
           </Col>
           <Col span={6}>
             <Card>
-              <Statistic
-                title="完成率"
-                value={`${statistics.completionRate}%`}
-                valueStyle={{ color: '#00b42a' }}
-              />
+              <div className="statistic-green">
+                <Statistic title="完成率" value={`${statistics.completionRate}%`} />
+              </div>
             </Card>
           </Col>
         </Row>

@@ -13,3 +13,16 @@
 .tasks-page .arco-badge {
   margin-right: 4px;
 }
+
+/* Statistic color styles */
+.statistic-success .arco-statistic-value {
+  color: #0fc6c2;
+}
+
+.statistic-primary .arco-statistic-value {
+  color: #165dff;
+}
+
+.statistic-green .arco-statistic-value {
+  color: #00b42a;
+}
