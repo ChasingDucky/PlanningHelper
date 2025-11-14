@@ -8,7 +8,7 @@ config({ path: join(__dirname, '../../../.env') });
 export const typeOrmConfig: DataSourceOptions = {
   type: 'postgres',
   host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT, 10) || 5432,
+  port: parseInt(process.env.DB_PORT || '5432', 10),
   username: process.env.DB_USERNAME || 'planning_user',
   password: process.env.DB_PASSWORD || 'planning_pass',
   database: process.env.DB_DATABASE || 'planning_helper',
