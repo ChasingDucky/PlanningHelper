@@ -1,0 +1,15 @@
+.tasks-page {
+  height: 100%;
+}
+
+.tasks-page .arco-card {
+  margin-bottom: 16px;
+}
+
+.tasks-page .arco-table-cell {
+  padding: 12px 16px;
+}
+
+.tasks-page .arco-badge {
+  margin-right: 4px;
+}
