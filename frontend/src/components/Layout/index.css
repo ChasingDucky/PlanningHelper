@@ -1,15 +1,20 @@
+/* ===== 液态玻璃布局样式 ===== */
 .app-layout {
   height: 100vh;
   width: 100%;
 }
 
 .app-header {
-  background: #fff;
-  border-bottom: 1px solid #e5e6eb;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   padding: 0 24px;
   height: 60px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .header-content {
@@ -26,6 +31,11 @@
   font-size: 20px;
   font-weight: 600;
   color: #1d2129;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .logo-text {
@@ -36,9 +46,12 @@
 }
 
 .app-sider {
-  background: #fff;
-  border-right: 1px solid #e5e6eb;
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
   height: calc(100vh - 60px);
+  transition: all 0.3s ease;
 }
 
 .menu-link {
@@ -47,10 +60,15 @@
   gap: 8px;
   color: inherit;
   text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.menu-link:hover {
+  transform: translateX(4px);
 }
 
 .app-content {
-  background: #f7f8fa;
+  background: transparent !important;
   height: calc(100vh - 60px);
   overflow: auto;
 }
@@ -58,4 +76,87 @@
 .content-wrapper {
   padding: 24px;
   min-height: 100%;
+}
+
+/* ===== 响应式布局 - 移动端 (< 768px) ===== */
+@media screen and (max-width: 767px) {
+  .app-header {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .logo {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .logo-text {
+    display: none; /* 移动端隐藏文字 */
+  }
+
+  .app-sider {
+    position: fixed;
+    left: -200px;
+    top: 56px;
+    width: 200px;
+    height: calc(100vh - 56px);
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .app-sider.mobile-menu-open {
+    left: 0;
+  }
+
+  .content-wrapper {
+    padding: 16px;
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* ===== 响应式布局 - 平板 (768px - 1024px) ===== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .app-sider {
+    width: 180px;
+  }
+
+  .content-wrapper {
+    padding: 20px;
+  }
+}
+
+/* ===== 暗色模式布局适配 ===== */
+@media (prefers-color-scheme: dark) {
+  .app-header {
+    background: rgba(30, 30, 30, 0.7) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .app-sider {
+    background: rgba(30, 30, 30, 0.6) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .logo {
+    color: #ffffff;
+  }
 }
