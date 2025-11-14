@@ -24,6 +24,16 @@
   justify-content: space-between;
 }
 
+.mobile-menu-button {
+  display: none;
+  color: #1d2129;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  transform: scale(1.1);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -83,6 +93,11 @@
   .app-header {
     padding: 0 16px;
     height: 56px;
+  }
+
+  .mobile-menu-button {
+    display: block;
+    margin-right: 12px;
   }
 
   .logo {
@@ -157,6 +172,10 @@
   }
 
   .logo {
+    color: #ffffff;
+  }
+
+  .mobile-menu-button {
     color: #ffffff;
   }
 }
