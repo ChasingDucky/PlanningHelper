@@ -99,7 +99,7 @@ export class TasksService {
       updateTaskDto.status &&
       updateTaskDto.status !== TaskStatus.COMPLETED
     ) {
-      updateTaskDto.completedAt = null;
+      updateTaskDto.completedAt = undefined;
     }
 
     Object.assign(task, updateTaskDto);
